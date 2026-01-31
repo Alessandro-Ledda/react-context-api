@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 //  import provider contesto
-import { BudgetModeProvider } from "./context/BudgetContent"
+import { BudgetModeProvider } from "./context/BudgetContext"
 
 // importiamo le varie pages da usare nelle rotte
 import HomePage from "./pages/HomePage"
 
 // import del layout di ref
-import DefaultLayout from "./Latouts/Layout"
+import DefaultLayout from "./Layout/Layout"
+
 import Products from "./pages/Products"
 
 function App() {

@@ -24,20 +24,20 @@ function BudgetModeProvider({ children }) {
     useEffect(fetchProducts, []);
 
     return (
-        <BudgetModeContext.Provider
+        <BudgetContext.Provider
             value={{
                 products
                 // budgetMode
             }}
         >
             {children}
-        </BudgetModeContext.Provider>
+        </BudgetContext.Provider>
     );
 }
 
 // definiamo hook per consumare il contesto
 function useBudgetMode() {
-    const context = useContext(BudgetModeContext);
+    const context = useContext(BudgetContext);
     return context
 }
 

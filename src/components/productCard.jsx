@@ -1,9 +1,9 @@
-import { useBudgetMode } from "../context/BudgetContent"
+import { useBudgetMode } from "../context/BudgetContext"
 
 function ProductCard({ product }) {
 
     // destrutturiamo oggetto props
-    const { title, image, price, category, description, id } = props
+    const { title, image, price, category, description, id } = product
 
     return (
         <div className="card">
