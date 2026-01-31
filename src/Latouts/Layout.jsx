@@ -12,3 +12,5 @@ function DefaultLayout() {
         </div>
     );
 }
+
+export default DefaultLayout
