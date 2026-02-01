@@ -1,5 +1,3 @@
-import { useBudgetMode } from "../context/BudgetContext"
-
 function ProductCard({ product }) {
 
     // destrutturiamo oggetto props

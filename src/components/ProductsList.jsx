@@ -11,7 +11,7 @@ function ProductsList() {
     return (
         <div className="container">
             <h1>Lista Prodotti</h1>
-            <div className="products">
+            <div className="products-content">
                 {products.map(product => (
                     <ProductCard
                         key={product.id}

@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom"
+import { useBudgetMode, } from "../context/BudgetContext"
 function Navbar() {
 
     const links = [
@@ -6,8 +7,10 @@ function Navbar() {
         { path: '/prodotti', label: 'Prodotti' }
     ]
 
+    const { budgetMode, toggleBudgetMode } = useBudgetMode();
+
     return (
-        <nav className="container-nav">
+        <nav className="nav">
             <div className="nav-content">
                 <ul>
                     {links.map((link, i) => (
@@ -18,8 +21,16 @@ function Navbar() {
                             </NavLink>
                         </li>
                     ))}
+                    <li className="btn">
+                        <button className="btn"
+                            onClick={toggleBudgetMode}>
+                            {budgetMode
+                                ? "Disattiva modalità budget"
+                                : "Attiva modalità budget"}
+                        </button>
+                    </li>
                 </ul>
-                <button className="btn">Attiva Modalità Budget</button>
+
             </div>
         </nav>
     )

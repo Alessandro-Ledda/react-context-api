@@ -12,7 +12,12 @@ function BudgetModeProvider({ children }) {
     const [products, setProducts] = useState([]);
 
     // creazione var di stato per id budget
-    const [budgetMode, setBudgetMode] = useState([]);
+    const [budgetMode, setBudgetMode] = useState(false);
+
+    // funzione gestione budget
+    const toggleBudgetMode = () => {
+        setBudgetMode(curr => !curr);
+    }
 
     function fetchProducts() {
         axios.get(endPoint)
@@ -26,8 +31,9 @@ function BudgetModeProvider({ children }) {
     return (
         <BudgetContext.Provider
             value={{
-                products
-                // budgetMode
+                products,
+                budgetMode,
+                toggleBudgetMode
             }}
         >
             {children}
